@@ -1,27 +1,36 @@
-# IrriguoChietiApp
+# Stepwise login in Angular (7)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
+We want to build a functional login stage to learn Angular and to obtain a useful tool.
 
-## Development server
+The web service offers two routes:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- the "login" route, that is the landing point of our web service,ù
+- the "main" route, that is the protected route, accessible only after a successful login
 
-## Code scaffolding
+The operation is based on two components:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- The "login" component, visible when authorization is pending
+- The "main" component, visible after successful login
 
-## Build
+The directory of the login components hosts also:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- an "auth" service implementing an observable
+- the "login" guard that implement a blocking "onActivate" method
 
-## Running unit tests
+## First commit
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Added main and login components with guard and service in the login component
 
-## Running end-to-end tests
+They are added using the ng-cli primitives, without editing
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Second commit
 
-## Further help
+The app-routing.module.ts is populated with suitable routes. The guard is added to the main route.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The html of the root app component contains only a title and the router-outlet.
+
+The guard is always false.
+
+### Observe
+
+Visiting the URL with empty route points to the login page ("login works"), the same with a login route. The URL with the "main" route return only the title.
