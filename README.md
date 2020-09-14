@@ -34,3 +34,11 @@ The guard is always false.
 ### Observe
 
 Visiting the URL with empty route points to the login page ("login works"), the same with a login route. The URL with the "main" route return only the title.
+
+##  Third commit
+
+The login form is added with a view and no function.
+
+### Observe
+
+See the form and type login and password, with no effect
