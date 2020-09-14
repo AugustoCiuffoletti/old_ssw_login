@@ -11,7 +11,7 @@ export class AuthService {
 
   login(user: string, pass: string) {
 	console.log("Checking credentials");
-    this._isLogged = true;
+    this._isLogged = false;
 	console.log("Credentials accepted");
 
     return this._isLogged;

@@ -53,4 +53,12 @@ The login component invokes the injectable authentication service.
 
 The console traces the call from the login component to the authentication service
 
+## Fifth commit
 
+The guard uses the isLogged accessor of the injected authenticator to control the access to the main component.
+
+The login handler routes to the user to the main component if the isLogged accessor is true, otherwise dispays a popup alert.
+
+### Observe
+
+After filling the credentials (any), clicking on the ok button visualizes the "main" component (and hides the login). Change the value of the return value of the fake authenticator to false, and see the popup appear.
