@@ -68,3 +68,15 @@ After filling the credentials (any), clicking on the ok button visualizes the "m
 The main component contains a logout button, linked to a function that calls a logout function in the authentication service, which sets to false the isLogged variable. The same function routes the user back to the login route.
 
 Also the routing to the main component is moved inside the authentication service.
+
+### Observe
+
+Clicking the logout button returns to the login screen
+
+## Seventh commit
+
+Activate the credentials check with a pair user/password (user="user", password="secret"), and bind the variables in the module to variables to application variables with the NgModel directive.
+
+### Observe
+
+The login mechanism is fully functional. Enjoy...

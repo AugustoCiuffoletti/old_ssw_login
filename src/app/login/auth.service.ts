@@ -12,8 +12,7 @@ export class AuthService {
 
   login(user: string, pass: string) {
 	console.log("Checking credentials");
-    this._isLogged = true;
-	console.log("Credentials accepted");
+    this._isLogged = (user === 'user' && pass === 'secret');
 	this._router.navigate(['main']);
     return this._isLogged;
   }
