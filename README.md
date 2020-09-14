@@ -62,3 +62,9 @@ The login handler routes to the user to the main component if the isLogged acces
 ### Observe
 
 After filling the credentials (any), clicking on the ok button visualizes the "main" component (and hides the login). Change the value of the return value of the fake authenticator to false, and see the popup appear.
+
+## Sixth commit
+
+The main component contains a logout button, linked to a function that calls a logout function in the authentication service, which sets to false the isLogged variable. The same function routes the user back to the login route.
+
+Also the routing to the main component is moved inside the authentication service.
