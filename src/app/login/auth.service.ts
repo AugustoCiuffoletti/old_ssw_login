@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +11,11 @@ export class AuthService {
   
   private _isLogged = false;
 
-  login(user: string, pass: string) {
+  login(user: string, pass: string): Observable<boolean> {
 	console.log("Checking credentials");
     this._isLogged = (user === 'user' && pass === 'secret');
 	this._router.navigate(['main']);
-    return this._isLogged;
+    return of(this._isLogged);
   }
 
   isLogged() {

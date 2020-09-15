@@ -80,3 +80,13 @@ Activate the credentials check with a pair user/password (user="user", password=
 ### Observe
 
 The login mechanism is fully functional. Enjoy...
+
+## Eight commit
+
+An event handler, like that in the login component, should operate asynchronously. For this, we introduce an asynchronous subscribe, mediated by an Observable that the authorization server returns to the event handler.
+So that, when the form waits for the user to digit the credentials, the form function is suspended waiting for the subscribe to unlock. 
+
+### Observe
+
+Nothing... The operation is exactly the same as before, but this is the right way to do that.
+

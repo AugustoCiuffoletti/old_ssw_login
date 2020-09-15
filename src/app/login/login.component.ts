@@ -16,7 +16,8 @@ export class LoginComponent implements OnInit {
   }
 
   onLoginEventHandler() {
-	if ( ! this._authService.login(this.login, this.password) ) 
-	  alert("Wrong credentials");
+    this._authService
+    .login(this.login, this.password)
+    .subscribe( resp => { if ( ! resp ) alert("Wrong credentials" ) } );
   }
 }
